@@ -1,5 +1,9 @@
 $colorMap: (
   light: #ddd,
+  primary: #1e90ff,
+  delete: #ff0000,
+  secondary: #959595,
+  text: #000,
 );
 
 @function color($key) {

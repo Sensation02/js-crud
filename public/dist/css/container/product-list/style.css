@@ -1,0 +1,100 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 40px 0;
+  gap: 32px;
+}
+
+.form__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e90ff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+main .return {
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: normal;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #1e90ff;
+  color: #ddd;
+  padding: 8px 16px;
+}
+
+main .return:hover {
+  background-color: #ddd;
+  color: #1e90ff;
+  border: 1px solid #1e90ff;
+}
+
+main .return a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+main .return a:hover {
+  color: #1e90ff;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.product .empty {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e90ff;
+  font-size: 16px;
+  color: #000;
+}
+
+.product__card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 5px 5px 10px #ddd;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.product__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product__id {
+  color: #959595;
+}
+
+.product__price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product__edit a {
+  text-decoration: none;
+  color: #1e90ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.product__edit a:hover {
+  color: darkblue;
+}
+
+/*# sourceMappingURL=style.css.map */

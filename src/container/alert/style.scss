@@ -1,0 +1,42 @@
+@use '../../lib/service.scss' as s;
+
+.alert {
+  padding: s.space(10);
+  &__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: s.space(2);
+    padding: s.space(5) s.space(3);
+    border-radius: s.space(2);
+    box-shadow: 0 2px 5px 5px s.color('light');
+  }
+  &__text {
+    color: s.color('text');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: s.space(2);
+  }
+  &__card__title {
+    font-size: s.space(4);
+    font-weight: bold;
+  }
+  &__card__description {
+    font-size: s.space(3);
+    font-weight: normal;
+  }
+  &__card__actions {
+    text-align: center;
+    padding: s.space(3) s.space(14);
+    @include s.button;
+    // background-color: s.color('primary');
+  }
+  &__card__actions__link {
+    text-decoration: none;
+    color: s.color('light');
+    &:hover {
+      color: s.color('primary');
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use '../../lib/service.scss' as s;
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(10);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: s.space(8);
+  gap: s.space(4);
+
+  &__title {
+    @include s.title;
+    color: s.color('text');
+  }
+
+  &__content {
+    display: grid;
+    gap: s.space(6);
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(1);
+  }
+
+  &__row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    gap: s.space(4);
+  }
+
+  &__label {
+    font-size: 14px;
+  }
+
+  &__input {
+    border: 1px solid s.color('light');
+    padding: s.space(2);
+    border-radius: s.space(1);
+    resize: none;
+  }
+
+  &__message {
+    font-size: small;
+    color: s.color('secondary');
+  }
+
+  &__button {
+    @include s.button;
+    padding: s.space(2);
+  }
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.delete {
+  background-color: s.color('delete');
+  &:hover {
+    background-color: s.color('light');
+    border: 1px solid black;
+    color: black;
+  }
+}

@@ -1,0 +1,8 @@
+@use './space.scss' as s;
+@use './var.scss' as v;
+
+@mixin title {
+  font-size: s.space(6);
+  font-weight: bold;
+  color: v.color('primary');
+}
