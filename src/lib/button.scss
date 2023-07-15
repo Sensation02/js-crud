@@ -1,0 +1,18 @@
+@use './space.scss' as s;
+@use './var.scss' as v;
+
+@mixin button {
+  border-radius: s.space(2);
+  font-size: s.space(3);
+  font-weight: normal;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: v.color('primary');
+  color: v.color('light');
+
+  &:hover {
+    background-color: v.color('light');
+    color: v.color('primary');
+    border: 1px solid v.color('primary');
+  }
+}

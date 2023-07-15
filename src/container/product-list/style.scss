@@ -1,0 +1,82 @@
+@use '../../lib/service.scss' as s;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 s.space(10) 0;
+  gap: s.space(8);
+
+  &__title {
+    @include s.title;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(10);
+  padding: s.space(10);
+  margin: 0 auto;
+  .return {
+    @include s.button;
+    padding: s.space(2) s.space(4);
+    a {
+      text-decoration: none;
+      color: s.color('light');
+      &:hover {
+        color: s.color('primary');
+      }
+    }
+  }
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: s.space(10);
+
+  .empty {
+    @include s.title;
+    font-size: s.space(4);
+    color: s.color('text');
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(4);
+    box-shadow: 5px 5px 10px s.color('light');
+    border-radius: s.space(2);
+    padding: s.space(4);
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__id {
+    color: s.color('secondary');
+  }
+
+  &__price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__edit {
+    a {
+      text-decoration: none;
+      color: s.color('primary');
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: darkblue;
+      }
+    }
+  }
+}
