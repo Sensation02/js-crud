@@ -1,0 +1,32 @@
+@use '../../lib/service.scss' as s;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(1);
+  width: 100%;
+
+  &__label {
+    font-size: s.space(4);
+    color: s.color('dark');
+  }
+
+  &__input {
+    padding: s.space(2) s.space(4);
+    border-radius: 10px;
+    border: 1px solid s.color('light');
+    font-size: s.space(4);
+    color: s.color('dark');
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+
+    &:focus {
+      border-color: s.color('primary');
+    }
+  }
+
+  &--disabled {
+    position: absolute;
+    display: none;
+  }
+}

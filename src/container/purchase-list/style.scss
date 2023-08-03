@@ -1,0 +1,67 @@
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/divider/style.scss' as divider;
+@use '../../lib/service.scss' as s;
+
+.main {
+  padding: s.space(4);
+  h1 {
+    color: s.color('primary');
+    margin-bottom: s.space(10);
+  }
+}
+
+.purchase-list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: s.space(4);
+    &:not(:last-of-type) {
+      border-bottom: 1px solid s.color('light');
+      margin-bottom: s.space(4);
+    }
+  }
+}
+
+.purchase-list__item--col:first-of-type {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+.purchase-list__item--col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0 s.space(2);
+  &:not(:first-of-type) {
+    gap: s.space(4);
+  }
+}
+
+.item--title {
+  color: gray;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.item--name {
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.id {
+  color: gray;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

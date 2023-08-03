@@ -1,0 +1,26 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.field__label {
+  font-size: 16px;
+  color: #585858;
+}
+.field__input {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  color: #585858;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+.field__input:focus {
+  border-color: #0050ff;
+}
+.field--disabled {
+  position: absolute;
+  display: none;
+}

@@ -1,0 +1,16 @@
+<main class="main">
+{{#with data}}
+    {{> heading title="Change of data"}}
+    <form method="POST" action="/purchase-update?id={{id}}">
+        <h2 class="id__title">ID:</h2>
+        <p class="id__text">{{id}}</p>
+        <div class="container">
+        {{> field label="Name:" name="name" value=name}}
+        {{> field label="Surname:" name="surname" value=surname}}
+        {{> field label="Phone:" name="phone" value=phone}}
+        {{> field label="Email:" name="email" value=email}}
+        </div>
+        {{> button text="Save"}}
+    </form>
+{{/with}}
+</main>

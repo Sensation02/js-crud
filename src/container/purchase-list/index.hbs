@@ -1,0 +1,31 @@
+<main class='main'>
+
+{{> heading title='Purchases'}}
+
+{{#with data}}
+  <div class="purchase-list">
+    {{#each list}}
+      <a href="/purchase-info?id={{id}}" class="purchase-list__item">
+        <div class="purchase-list__item--col">
+          <h6 class="item--title id">ID: </h6>
+          <p class="item--name id">{{this.id}}</p>
+        </div>
+        <div class="purchase-list__item--col">
+          <h6 class="item--title">Product: </h6>
+          <p class="item--name">{{this.title}}</p>
+        </div>
+        <div class="purchase-list__item--col">
+          <h6 class="item--title">Price: </h6>
+          <p class="item--name">{{this.totalPrice}}$</p>
+        </div>
+        <div class="purchase-list__item--col">
+          <h6 class="item--title">Bonus: </h6>
+          <p class="item--name">{{this.bonus}}$</p>
+        </div>
+      </a>
+    {{/each}}
+
+  </div>
+{{/with}}
+
+</main>

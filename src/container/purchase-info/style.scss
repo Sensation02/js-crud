@@ -1,0 +1,40 @@
+@use '../../lib/service.scss' as s;
+
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/divider/style.scss' as divider;
+@use '../../component/button/style.scss' as button;
+
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: s.space(10);
+  padding: s.space(10);
+  h1 {
+    color: s.color('primary');
+    margin-bottom: s.space(8);
+  }
+}
+
+.container {
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  padding: s.space(5);
+  display: flex;
+  flex-direction: column;
+  gap: s.space(3);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding: s.space(5);
+  gap: s.space(80);
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(3);
+}

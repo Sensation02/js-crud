@@ -1,0 +1,7 @@
+@use '../../lib/service.scss' as s;
+
+.button {
+  @include s.button;
+  padding: s.space(2) s.space(5);
+  font-size: s.space(4);
+}

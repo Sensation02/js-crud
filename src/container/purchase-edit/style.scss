@@ -1,0 +1,34 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/field/style.scss' as field;
+@use '../../component/button/style.scss' as button;
+
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: s.space(10);
+  padding: s.space(10);
+}
+
+.id__title {
+  font-size: s.space(4);
+  font-weight: 600;
+
+  color: s.color('dark');
+}
+
+.id__text {
+  font-size: s.space(3);
+  font-weight: 600;
+  margin-bottom: s.space(4);
+  color: s.color('dark');
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: s.space(8);
+  margin-bottom: s.space(8);
+}

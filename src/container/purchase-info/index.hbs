@@ -1,0 +1,60 @@
+<main class='main'>
+  
+{{#with data}}
+{{!-- {{#each list}} --}}
+  <div class="container">
+    {{> heading title='Product Info'}}
+    <div class="row">
+      <div class="col">
+        <h4 class="row--title">ID: </h4>
+        <p class="row--info">{{id}}</p>
+      </div>
+    </div>
+    {{> divider}}
+    <div class="row">
+      <div class="col">
+        <h4 class="row--title">Name: </h4>
+        <p class="row--info">{{name}}</p>
+        <h4 class="row--title">Phone: </h4>
+        <p class="row--info">{{phone}}</p>
+      </div>
+      <div class="col">
+        <h4 class="row--title">Surname: </h4>
+        <p class="row--info">{{surname}}</p>
+        <h4 class="row--title">Email: </h4>
+        <p class="row--info">{{email}}</p>
+      </div>
+    </div>
+    {{> divider}}
+    <div class="row">
+      <div class="col">
+        <h4 class="row--title">Address: </h4>
+        <p class="row--info">вул. Центральна 14, кв. 36, м. Київ, 02000, Україна</p>
+        <h4 class="row--title">Product: </h4>
+        <p class="row--info">{{product}}</p>
+      </div>
+    </div>
+    {{> divider}}
+    <div class="row">
+      <div class="col">
+        <h4 class="row--title">Product Price: </h4>
+        <p class="row--info">{{productPrice}}$</p>
+        <h4 class="row--title">Total Price: </h4>
+        <p class="row--info">{{totalPrice}}$</p>
+      </div>
+      <div class="col">
+        <h4 class="row--title">Shipping price: </h4>
+        <p class="row--info">{{deliveryPrice}}$</p>
+        <h4 class="row--title">Bonuses: </h4>
+        <p class="row--info">{{bonus}}$</p>
+      </div>
+    </div>
+    {{>divider}}
+
+    <a href="/purchase-edit?id={{id}}">
+      {{> button text='Change info'}}
+    </a>
+  </div>
+  {{!-- {{/each}} --}}
+{{/with}}
+</main>

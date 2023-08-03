@@ -1,0 +1,76 @@
+@use '../../lib/service.scss' as s;
+
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/purchase-product/style.scss' as
+  purchaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/divider/style.scss' as divider;
+@use '../../component/button/style.scss' as button;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(10);
+  padding: s.space(10);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(4);
+  align-items: flex-start;
+
+  &__image {
+    min-height: 80px;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: s.space(5);
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    font-size: s.space(4);
+    color: s.color('gray');
+  }
+
+  &__category {
+    font-size: s.space(4) - 2px;
+    color: s.color('dark');
+    padding: s.space(1) s.space(3);
+    border-radius: 30px;
+    border: 1px solid transparent;
+  }
+
+  &__category--1 {
+    border-color: blue;
+    color: blue;
+  }
+
+  &__category--2 {
+    border-color: green;
+    color: green;
+  }
+
+  // &__button {
+  //   @include s.button;
+  //   padding: s.space(2) s.space(4);
+  //   font-size: s.space(4);
+  // }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  );
+  gap: s.space(5);
+}

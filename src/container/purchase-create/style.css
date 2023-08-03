@@ -1,0 +1,146 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heading__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.heading__info {
+  font-size: 16px;
+  color: #000;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.product-card:hover {
+  transform: scale(1.05);
+}
+.product-card__image {
+  width: 100%;
+  height: 200px;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-card__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-card__subtitle {
+  font-size: 16px;
+  font-weight: normal;
+}
+.product-card__category {
+  padding: 4px 8px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #585858;
+}
+.product-card__category-1 {
+  border-color: blue;
+  color: blue;
+}
+.product-card__category-2 {
+  border-color: green;
+  color: green;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: normal;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #0050ff;
+  color: #ddd;
+  padding: 8px 20px;
+  font-size: 16px;
+}
+.button:hover {
+  background-color: #ddd;
+  color: #0050ff;
+  border: 1px solid #0050ff;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.field__label {
+  font-size: 16px;
+  color: #585858;
+}
+.field__input {
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid;
+  font-size: 16px;
+  color: #585858;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+.field__input:focus {
+  border-color: #0050ff;
+}
+
+.product-info__divider {
+  width: 100%;
+  height: 1px;
+  border: 1px solid #ddd;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+}
+
+.form-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.cart {
+  display: grid;
+  gap: 8px;
+}
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.form-card__total {
+  font-size: 20px;
+}

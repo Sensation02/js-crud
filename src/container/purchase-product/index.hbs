@@ -1,0 +1,37 @@
+<main class="main">
+
+  {{> heading title='Info about product'}}
+
+  {{#with data.product}}
+  <form method="POST" action="/purchase-create?id={{id}}">
+    <div class="product-info">
+
+      <img src="{{img}}" alt="{{title}}" class="product-info__image">
+      <h2 class="product-info__title">{{title}}</h2>
+      <p class="product-info__subtitle">{{description}}</p>
+
+      {{> divider}}
+
+      {{#each category}}
+        <span class="product-info__category product-info__category--{{id}}">{{text}}</span>
+      {{/each}}
+
+      {{> divider}}
+
+      {{> field label='Quantity' type='number' name='amount' value='1'}}
+
+      {{> button text='Add to cart:' price=price}}
+
+    </div>
+  </form>
+  {{/with}}
+
+  {{> heading title='Other products' info='Computers and Notebooks'}}
+
+  <div class="product-list">
+    {{#each data.list}}
+      {{> purchase-product data=this}}
+    {{/each}}
+  </div>
+
+</main>
