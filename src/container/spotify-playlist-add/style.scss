@@ -1,0 +1,16 @@
+@use '../../lib/service.scss' as s;
+@use '../../lib/spotify.scss' as spotify;
+
+.return {
+  color: s.color(black);
+  background-color: s.color('accent');
+  max-width: fit-content;
+  padding: s.space(3) s.space(10);
+  border-radius: 50px;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

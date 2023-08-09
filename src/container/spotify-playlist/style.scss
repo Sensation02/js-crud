@@ -1,0 +1,14 @@
+@use '../../lib/service.scss' as s;
+@use '../../lib/spotify.scss' as spotify;
+
+.add-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: s.space(6);
+  color: s.color('light');
+  font-size: 1.2 rem;
+  background-color: s.color('background2');
+  padding: s.space(2) s.space(4) s.space(2) s.space(2);
+  width: 490px;
+}

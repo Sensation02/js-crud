@@ -1,0 +1,59 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  background-color: #121212;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 24px 8px;
+}
+.main__content {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.title {
+  font-size: 24px;
+}
+.title--center {
+  text-align: center;
+}
+
+.track__list {
+  display: grid;
+  gap: 28px;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: 92px 300px 42px;
+  gap: 28px;
+  align-items: center;
+}
+.track:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.track__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.track__content__name {
+  font-size: 24px;
+  color: #ddd;
+}
+.track__content__artist {
+  font-size: 16px;
+  color: #ddd;
+}

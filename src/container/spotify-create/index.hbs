@@ -1,0 +1,27 @@
+<main class='main'>
+  <div class='main__content'>
+    <header class='header'>
+      <a href='/' class='cross'>
+        <img src='/img/svg/akar-icons_cross.svg' alt='' />
+      </a>
+    </header>
+    <h1 class='title title--center'>
+      Name your playlist
+    </h1>
+
+    <form
+      method='POST'
+      action='/spotify-create{{#if data.isMix}}?isMix=true{{/if}}'
+      class='form'
+    >
+      <input
+        type='text'
+        class='form__field'
+        placeholder='Name'
+        name="name"
+        required
+      />
+      <button class='form__button'>Create</button>
+    </form>
+  </div>
+</main>

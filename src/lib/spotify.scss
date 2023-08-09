@@ -1,0 +1,62 @@
+@use '../lib/service.scss' as s;
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  background-color: s.color('background');
+  height: 100vh;
+  color: s.color('text');
+  display: flex;
+  justify-content: center;
+  padding: s.space(6) s.space(2);
+
+  &__content {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: s.space(10);
+  }
+}
+
+.title {
+  font-size: s.space(6);
+  &--center {
+    text-align: center;
+  }
+}
+
+.track__list {
+  display: grid;
+  gap: s.space(7);
+}
+
+.track {
+  display: grid;
+  grid-template-columns: 92px 300px 42px;
+  gap: s.space(7);
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: s.space(4);
+  }
+}
+
+.track__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: s.space(2);
+  &__name {
+    font-size: s.space(6);
+    color: s.color('light');
+  }
+  &__artist {
+    font-size: s.space(4);
+    color: s.color('light');
+  }
+}
