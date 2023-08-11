@@ -108,8 +108,7 @@ class Playlist {
 
   // метод додавання треків по id
   addTrackById = (id) => {
-    const track = Track.getById(id)
-    this.tracks.push(track)
+    this.tracks.push(id)
   }
 
   static findListByValue(name) {
@@ -307,7 +306,7 @@ router.get('/spotify-track-add', function (req, res) {
 
 router.get('/spotify-track-add', function (req, res) {
   const playlistId = req.query.playlistId
-  const trackId = req.query.trackId
+  const trackId = req.body.trackId
 
   const playlist = Playlist.getById(+playlistId)
 
@@ -323,7 +322,6 @@ router.get('/spotify-track-add', function (req, res) {
   }
 
   playlist.addTrackById(+trackId)
-  console.log(playlist.tracks)
   if (!!playlist.addTrackById(+trackId)) {
     res.render('spotify-playlist', {
       style: 'spotify-playlist',
