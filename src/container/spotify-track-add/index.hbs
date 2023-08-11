@@ -5,18 +5,21 @@
       <div class='track__list'>
         {{#each tracks}}
           <li class='track'>
-            <img
-              src='{{image}}'
-              width='92px'
-              height='92px'
-            />
+            <img src='{{image}}' width='92px' height='92px' />
             <div class='track__content'>
               <strong class='track__name'>{{name}}</strong>
               <em class='track__artist'>{{artist}}</em>
             </div>
-            <a href='/spotify-track-add?playlistId={{../playlistId}}'>
+            {{!-- <a href='{{../link}}'>
               <img src='/img/svg/add.svg' />
-            </a>
+            </a> --}}
+            <form action="/spotify-track-add" method="POST">
+              <input type="hidden" name="playlistId" value="{{../playlistId}}">
+              <input type="hidden" name="trackId" value="{{id}}">
+              <button type="submit">
+                <img src='/img/svg/add.svg' />
+              </button>
+            </form>
           </li>
         {{/each}}
       </div>
