@@ -12,3 +12,16 @@ $colorMap: (
 @function color($key) {
   @return map-get($colorMap, $key);
 }
+
+$sizeMap: (
+  textBig: 60px,
+  textTitle: 40px,
+  textSubtitle: 28px,
+  textDescription: 24px,
+  text: 20px,
+  textSmall: 16px,
+);
+
+@function size($key: 'default') {
+  @return map-get($sizeMap, $key);
+}

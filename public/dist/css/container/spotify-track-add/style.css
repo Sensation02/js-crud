@@ -94,27 +94,17 @@ body {
   font-size: 16px;
 }
 
-.choose {
-  display: grid;
-  gap: 24px;
+.return {
+  color: #000;
+  background-color: #20d562;
+  max-width: fit-content;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
 }
-
-.choose__item {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 24px;
-}
-
-.choose__image {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-}
-
-.choose__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.return:hover {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,16 +5,15 @@ a {
 
 .main {
   background-color: #121212;
-  height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
   color: #fff;
   display: flex;
   justify-content: center;
   padding: 24px 8px;
 }
-
 .main__content {
-  width: 100%;
-  max-width: 600px;
+  width: clamp(300px, 120%, 1200px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +24,6 @@ a {
 .title {
   font-size: 24px;
 }
-
 .title--center {
   text-align: center;
 }
@@ -41,7 +39,6 @@ a {
   gap: 28px;
   align-items: center;
 }
-
 .track:not(:last-child) {
   margin-bottom: 16px;
 }
@@ -52,30 +49,34 @@ a {
   justify-content: center;
   gap: 8px;
 }
-
 .track__content__name {
   font-size: 24px;
   color: #ddd;
 }
-
 .track__content__artist {
   font-size: 16px;
   color: #ddd;
 }
 
-.return {
-  color: #000;
-  background-color: #20d562;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  padding: 12px 40px;
-  border-radius: 50px;
-  transition: opacity 0.2s ease-in-out;
-  cursor: pointer;
+.header-search {
+  display: grid;
+  grid-template-columns: 50px auto min-content;
+  gap: 20px;
+  border-radius: 8px;
+  background: #292929;
+  padding: 12px 16px;
 }
-
-.return:hover {
-  opacity: 0.8;
+.header-search .search__input {
+  font-size: 24px;
 }
-
-/*# sourceMappingURL=style.css.map */
+.header-search .search__button {
+  font-size: 20px;
+  color: #ddd;
+  transition: opacity 0.6s;
+}
+.header-search .search__button:hover {
+  opacity: 0.6;
+}
+.header-search .icon {
+  width: 40px;
+}

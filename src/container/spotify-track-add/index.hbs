@@ -1,22 +1,26 @@
 <main class='main'>
-  {{#with data}}
-    <div class='main__content'>
+  <div class='main__content'>
+    {{#with data}}
       <h1 class='title title--center'>Add to playlist</h1>
       <div class='track__list'>
         {{#each tracks}}
           <li class='track'>
-            <img src='{{image}}' width='92px' height='92px' />
+            <img
+              src='{{image}}'
+              width='92px'
+              height='92px'
+            />
             <div class='track__content'>
               <strong class='track__name'>{{name}}</strong>
               <em class='track__artist'>{{artist}}</em>
             </div>
-            <a href='/spotify-track-add?playlistId={{../playlistId}}&trackId={{../id}}'>
+            <a href='/spotify-track-add?playlistId={{../playlistId}}'>
               <img src='/img/svg/add.svg' />
             </a>
           </li>
         {{/each}}
       </div>
-      <a href="/spotify-playlist?playlistId={{playlistId}}" class="return">Return</a>
-    </div>
-  {{/with}}
+      {{!-- <a href='/spotify-playlist?playlistId=${{playlistId}}' class='return'>Return</a> --}}
+    {{/with}}
+  </div>
 </main>

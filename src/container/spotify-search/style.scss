@@ -1,0 +1,29 @@
+@use '../../lib/service.scss' as s;
+
+@use '../../lib/spotify.scss' as spotify;
+
+.header-search {
+  display: grid;
+  grid-template-columns: 50px auto min-content;
+  gap: s.space(5);
+  border-radius: 8px;
+  background: #292929;
+  padding: s.space(3) s.space(4);
+
+  .search__input {
+    font-size: s.size(textDescription);
+  }
+
+  .search__button {
+    font-size: s.size(text);
+    color: s.color(light);
+    transition: opacity 0.6s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .icon {
+    width: 40px;
+  }
+}

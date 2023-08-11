@@ -5,17 +5,19 @@ a {
   color: inherit;
 }
 
-.main {
+body {
   background-color: s.color('background');
-  height: 100vh;
+}
+
+.main {
+  height: fit-content;
   color: s.color('text');
   display: flex;
   justify-content: center;
   padding: s.space(6) s.space(2);
 
   &__content {
-    width: 100%;
-    max-width: 600px;
+    width: clamp(300px, 120%, 1200px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,5 +60,43 @@ a {
   &__artist {
     font-size: s.space(4);
     color: s.color('light');
+  }
+}
+
+.playlist__list {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(8);
+}
+
+.playlist {
+  display: flex;
+  align-items: center;
+  gap: s.space(5);
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(5);
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: s.size(textTitle);
+    font-size: s.size(textDescription);
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: s.size(text);
+    font-size: s.size(textSmall);
   }
 }

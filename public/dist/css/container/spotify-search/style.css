@@ -94,27 +94,27 @@ body {
   font-size: 16px;
 }
 
-.choose {
+.header-search {
   display: grid;
-  gap: 24px;
+  grid-template-columns: 50px auto min-content;
+  gap: 20px;
+  border-radius: 8px;
+  background: #292929;
+  padding: 12px 16px;
 }
-
-.choose__item {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 24px;
+.header-search .search__input {
+  font-size: 24px;
 }
-
-.choose__image {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
+.header-search .search__button {
+  font-size: 20px;
+  color: #ddd;
+  transition: opacity 0.6s;
 }
-
-.choose__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.header-search .search__button:hover {
+  opacity: 0.6;
+}
+.header-search .icon {
+  width: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

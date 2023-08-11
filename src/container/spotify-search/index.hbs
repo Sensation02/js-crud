@@ -1,0 +1,43 @@
+<main class='main'>
+  {{#with data}}
+    <section class='main__content'>
+      <form
+        method='POST'
+        action='/spotify-search'
+        class='header-search'
+      >
+        <img
+          src='/img/svg/search.svg'
+          alt=''
+          class='icon'
+        />
+        <input
+          type='search'
+          class='search__input'
+          placeholder='Enter playlist name'
+          name='value'
+          value='{{value}}'
+        />
+        <button class='search__button'>Search</button>
+      </form>
+
+      <ul class='playlist__list'>
+        {{#each list}}
+          <li class='playlist'>
+            <img src='{{image}}' class='playlist__image' />
+            <div class='playlist__content'>
+              <strong
+                class='playlist__title'
+              >{{name}}</strong>
+              <p class='playlist__text'>
+                Playlist -
+                {{amount}}
+                songs
+              </p>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+  {{/with}}
+</main>

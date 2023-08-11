@@ -3,17 +3,19 @@ a {
   color: inherit;
 }
 
-.main {
+body {
   background-color: #121212;
-  height: 100vh;
+}
+
+.main {
+  height: fit-content;
   color: #fff;
   display: flex;
   justify-content: center;
   padding: 24px 8px;
 }
 .main__content {
-  width: 100%;
-  max-width: 600px;
+  width: clamp(300px, 120%, 1200px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,6 +58,40 @@ a {
 .track__content__artist {
   font-size: 16px;
   color: #ddd;
+}
+
+.playlist__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.playlist {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.playlist__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+.playlist__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.playlist__title {
+  font-weight: 500;
+  font-size: 40px;
+  font-size: 24px;
+}
+.playlist__text {
+  font-weight: 400;
+  font-size: 20px;
+  font-size: 16px;
 }
 
 .main {

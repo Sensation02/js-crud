@@ -1,0 +1,44 @@
+<main class='main'>
+  {{#with data}}
+    <section class='main__content'>
+      <header class='header'>
+        <h1 class='header__title'>Library</h1>
+        <div class='header__icons'>
+          <a href='/spotify-search' class='header__icon'>
+            <img
+              src='/img/svg/search.svg'
+              alt='search'
+              class='icon'
+            />
+          </a>
+          <a href='/spotify-choose' class='header__icon'>
+            <img
+              src='/img/svg/add.svg'
+              alt='add'
+              class='icon'
+            />
+          </a>
+        </div>
+      </header>
+
+      <ul class='playlist__list'>
+        {{#each list}}
+          <a
+            href='/spotify-track-add?playlistId={{id}}'
+            class='playlist__item'
+          >
+            <li class='playlist__content'>
+              <img
+                src='{{image}}'
+                alt=''
+                class='playlist__image'
+              />
+              <strong class='title'>{{name}}</strong>
+              <p class='text'>{{amount}} songs</p>
+            </li>
+          </a>
+        {{/each}}
+      </ul>
+    </section>
+  {{/with}}
+</main>
